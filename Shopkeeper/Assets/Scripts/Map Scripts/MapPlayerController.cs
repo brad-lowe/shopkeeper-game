@@ -23,6 +23,5 @@ public class MapPlayerController : MonoBehaviour
         float horizontal = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
 
         transform.Translate(horizontal, vertical, 0);
-        bad code
     }
 }
