@@ -11,6 +11,7 @@ public class CameraRayCaster : MonoBehaviour
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, 15))
         {
             GameObject hitObject = hitInfo.collider.gameObject;
+            Debug.Log("hit object");
             if (Input.GetMouseButtonDown(0))
             {
                 hitObject.GetComponent<Interactable>().Interact();
