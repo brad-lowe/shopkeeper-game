@@ -15,7 +15,7 @@ public class InteractableSceneSwitch : MonoBehaviour, Interactable
 
     void Update() {
         float dist = (transform.position - player.transform.position).magnitude;
-        //Debug.Log(dist);
+        Debug.Log(dist);
         if(dist < 1) {
             Interact();
         }
