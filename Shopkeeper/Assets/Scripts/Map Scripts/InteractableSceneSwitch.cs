@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class InteractableSceneSwitch : MonoBehaviour, Interactable 
 { 
 	GameObject player; 
-	[SerializedField] string sceneName; 
+	[SerializeField] string sceneName; 
     /*
         SerializedField will allow to make the sceneName variable editable in Unity 
     */
