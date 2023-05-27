@@ -29,7 +29,7 @@ public class MouseShake : MonoBehaviour
             {
                 lastmouseposition = Input.mousePosition;
                 score++;
-                Debug.Log($"# of apples: {numApples} Score: {score}");
+                Debug.Log($"# of apples: {InventoryManager.inventoryInstance.apples.Count} Score: {score}");
             }
             else
             {
@@ -41,13 +41,13 @@ public class MouseShake : MonoBehaviour
                 {
                     score = 0;
                 }
-                Debug.Log($"# of apples: {numApples} Score: {score}");
+                Debug.Log($"# of apples: {InventoryManager.inventoryInstance.apples.Count} Score: {score}");
             }
         }
         else
         {
-            numApples++;
-            Debug.Log($"You got an apple! Total apples: {numApples}");
+            InventoryManager.inventoryInstance.AddApple();
+            Debug.Log($"You got an apple! Total apples: {InventoryManager.inventoryInstance.apples.Count}");
             score = 0;
         }
     }
