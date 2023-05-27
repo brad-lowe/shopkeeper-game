@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if(collider.gameObject.tag == "Block" && Input.GetKeyDown(KeyCode.M))
         {
             //canBeDestroyed = true;
-            Destroy(collider.gameObject);
+            Destroy(collider.gameObject, 5);
         }
     }
 
