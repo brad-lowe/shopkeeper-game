@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     float allocatedButtonTime = 0.3f;
     float timeJumped = 0f;
 
+    //bool canBeDestroyed = false;
+
     public Rigidbody2D rb;
 
     bool inAJump = false;
@@ -20,16 +23,22 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //blocks = GameObject.FindGameObjectsWithTag("Block");
     }
 
-    void onCollisionEnter()
+    void OnCollisionStay2D(Collision2D collider)
     {
-        //inAJump = false;
+        //inAJump = false;0
+        if(collider.gameObject.tag == "Block" && Input.GetKeyDown(KeyCode.M))
+        {
+            //canBeDestroyed = true;
+            Destroy(collider.gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if (Input.GetKeyDown(KeyCode.Space))
         {
             inAJump = true;
@@ -53,12 +62,12 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = fallGravityScale;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             facingRight = false;
             horizontalMovement = true; 
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             facingRight = true;
             horizontalMovement = true;
@@ -79,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftArrow) && !facingRight || Input.GetKeyUp(KeyCode.RightArrow) && facingRight)
+        if (Input.GetKeyUp(KeyCode.A) && !facingRight || Input.GetKeyUp(KeyCode.D) && facingRight)
         {
             horizontalMovement = false;
         }
