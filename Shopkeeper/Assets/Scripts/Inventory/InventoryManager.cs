@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+class Apple : Item
+{
+    public Apple()
+    {
+        this.icon = Resources.Load<Sprite>("Final_Item_Sprites");
+    }
+}
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventoryInstance;
     public List<Item> items = new List<Item>();
+    public List<Item> apples = new List<Item>();
 
     public Transform itemContent;
     public GameObject inventoryItem;
@@ -15,14 +22,16 @@ public class InventoryManager : MonoBehaviour
         inventoryInstance = this;
     }
 
-    public void Add(Item item)
+    public void AddApple()
     {
-        items.Add(item);
+        Apple item = new Apple();
+        apples.Add(item);
     }
 
-    public void Remove(Item item)
+    public void RemoveApple()
     {
-        items.Remove(item);
+        Apple item = new Apple();
+        apples.Remove(item);
     }
 
     public void ListItems()
