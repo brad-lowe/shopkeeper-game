@@ -45,4 +45,14 @@ public class InventoryManager : MonoBehaviour
             //Debug.Log(itemName);
         }
     }
+    
+    public void Add(Item item)
+    {
+        AddApple();
+    }
+
+    public void Remove()
+    {
+        RemoveApple();
+    }
 }
