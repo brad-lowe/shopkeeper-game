@@ -29,10 +29,10 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionStay2D(Collision2D collider)
     {
         //inAJump = false;0
-        if(collider.gameObject.tag == "Block" && Input.GetKeyDown(KeyCode.M))
+        if(collider.gameObject.tag == "Block" && Input.GetKey(KeyCode.M))
         {
             //canBeDestroyed = true;
-            Destroy(collider.gameObject, 5);
+            Destroy(collider.gameObject, 2);
         }
     }
 
@@ -62,12 +62,12 @@ public class PlayerMovement : MonoBehaviour
             rb.gravityScale = fallGravityScale;
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             facingRight = false;
             horizontalMovement = true; 
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             facingRight = true;
             horizontalMovement = true;
@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
-        if (Input.GetKeyUp(KeyCode.A) && !facingRight || Input.GetKeyUp(KeyCode.D) && facingRight)
+        if ((Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow)) && !facingRight || (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D)) && facingRight)
         {
             horizontalMovement = false;
         }
