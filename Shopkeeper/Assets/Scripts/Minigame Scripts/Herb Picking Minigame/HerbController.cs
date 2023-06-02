@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
 
-public class HerbController : MonoBehaviour
+public class HerbController : Minigame
 {
     private List<Item> itemClasses;
     private List<InteractableHerb> items;
@@ -119,6 +119,7 @@ public class HerbController : MonoBehaviour
     void EndGame() {
         enabled = false;
         Debug.Log("GAME OVER");
+        EndMinigame();
     }
 
 }
