@@ -27,6 +27,11 @@ public class InventoryManager : MonoBehaviour
         inventoryInstance = this;
     }
 
+    public void Add(Item item) {
+        if (item is Apple)
+            AddApple();
+    }
+
     public void AddApple()
     {
         Item item = (Item)ScriptableObject.CreateInstance("Item");
