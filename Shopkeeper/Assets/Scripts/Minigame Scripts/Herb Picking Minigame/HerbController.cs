@@ -43,7 +43,7 @@ public class HerbController : Minigame
                 itemLastClicked = hit.collider.gameObject.GetComponent<InteractableHerb>();
                 if(itemLastClicked.name.Contains(nameToClick)) {
                     Debug.Log("Correct!");
-                    timer += 2f;
+                    timer += 1f;
                     timerText.text = (string) ((int)timer).ToString();
                     NewRound();
                 }
@@ -61,7 +61,7 @@ public class HerbController : Minigame
 
     void BeginRound()
     {
-        int numHerbs = round*8 + 10;
+        int numHerbs = round*15 + 5;
 
         itemLastClicked = null;
         Random rand = new Random();
