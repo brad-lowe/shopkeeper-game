@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map.unity
     guid: 5f948bb8ee4f74e39a0ead77e4f986be
+  - enabled: 1
+    path: Assets/Scenes/Mining Minigame.unity
+    guid: df5fe59cd660fb04d8389e8662cacb08
+  - enabled: 1
+    path: Assets/Scenes/Milking Minigame.unity
+    guid: fde9d766f75d2411392e887a6020b7fb
+  - enabled: 1
+    path: Assets/Scenes/Herb Picking.unity
+    guid: 765319d9540cc4e51a811cee1017fcaf
+  - enabled: 1
+    path: Assets/Scenes/Fishing Minigame.unity
+    guid: 3a331ca3fba6d465f8332f530d73bf78
+  - enabled: 1
+    path: Assets/Scenes/Apple Minigame.unity
+    guid: 99461f8ef258e410f8afa512ecdf538b
   m_configObjects: {}
