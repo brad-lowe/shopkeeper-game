@@ -54,7 +54,7 @@ public class InventoryManager : MonoBehaviour
     public List<Item> items = new List<Item>();
     public List<Item> apples = new List<Item>();
     public List<Item> wood = new List<Item>();
-    public List<Item> steel = new List<Item>();
+    public List<Item> stones = new List<Item>();
     public List<Item> cilantro = new List<Item>();
     public List<Item> beatroots = new List<Item>();
     public List<Item> zingsengs = new List<Item>();
@@ -91,6 +91,19 @@ public class InventoryManager : MonoBehaviour
             AddMysteriousHerb();
     }
 
+    public void AddStone()
+    {
+        Item item = (Item)ScriptableObject.CreateInstance("Item");
+        item.icon = Resources.Load<Sprite>("Stone");
+        stones.Add(item);
+    }
+
+    public void RemoveStone()
+    {
+        Item item = (Item)ScriptableObject.CreateInstance("Item");
+        item.icon = Resources.Load<Sprite>("Stone");
+        stones.Remove(item);
+    }
     public void AddApple()
     {
         Item item = (Item)ScriptableObject.CreateInstance("Item");
@@ -172,10 +185,10 @@ public class InventoryManager : MonoBehaviour
     }
     public void CraftGarnishedSword()
     {
-        if (wood.Count != 0 && steel.Count != 0 && cilantro.Count != 0)
+        if (wood.Count > 0 && stones.Count > 0 && cilantro.Count > 0)
         {
             wood.Remove(wood[0]);
-            steel.Remove(steel[0]);
+            stones.Remove(stones[0]);
             cilantro.Remove(cilantro[0]);
             Item cilsword = (Item)ScriptableObject.CreateInstance("Item");
             cilsword.id = weapons.Count;
