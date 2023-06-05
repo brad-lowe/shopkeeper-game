@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MouseShake : Minigame
 {
@@ -9,9 +10,11 @@ public class MouseShake : Minigame
     int score = 0;
     int numApples = 0;
     float timer = 5f;
+    public TextMeshPro appleText;
     void Start()
     {
         lastmouseposition = Input.mousePosition;
+        Debug.Log(appleText);
     }
     
     /* 
@@ -31,7 +34,7 @@ public class MouseShake : Minigame
             {
                 lastmouseposition = Input.mousePosition;
                 score++;
-                Debug.Log($"# of apples: {InventoryManager.inventoryInstance.apples.Count} Score: {score}");
+                appleText.SetText($"# of apples: {InventoryManager.inventoryInstance.apples.Count} Score: {score}");
             }
             else
             {
@@ -43,7 +46,7 @@ public class MouseShake : Minigame
                 {
                     score = 0;
                 }
-                Debug.Log($"# of apples: {InventoryManager.inventoryInstance.apples.Count} Score: {score}");
+                appleText.SetText($"# of apples: {InventoryManager.inventoryInstance.apples.Count} Score: {score}");
             }
         }
         else
