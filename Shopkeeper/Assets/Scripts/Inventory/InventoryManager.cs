@@ -67,8 +67,13 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        inventoryInstance = this;
         Object.DontDestroyOnLoad(this.gameObject);
+
+        if (inventoryInstance == null) {
+            inventoryInstance = this;
+        } else {
+            DestroyObject(this.gameObject);
+     }
     }
 
     public void Add(Item item) {

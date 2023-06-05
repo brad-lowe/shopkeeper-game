@@ -20,20 +20,21 @@ public class HerbController : Minigame
 
     // Start is called before the first frame update
     void AddItem(InteractableHerb item) {
-        if(item.name == "Cilantro") {
+        Debug.Log(item.name);
+        if(item.name.Contains("Cilantro")) {
             InventoryManager.inventoryInstance.AddCilantro();
         } 
-        if(item.name == "Beatroot") {
-            inventory.AddBeatroot();
+        if(item.name.Contains("Beatroot")) {
+            InventoryManager.inventoryInstance.AddBeatroot();
         }
-        if(item.name == "Zingseng") {
-            inventory.AddZingseng();
+        if(item.name.Contains("Zingseng")) {
+            InventoryManager.inventoryInstance.AddZingseng();
         }
-        if(item.name == "Mushgloom") {
-            inventory.AddMushgloom();
+        if(item.name.Contains("Mushgloom")) {
+            InventoryManager.inventoryInstance.AddMushgloom();
         }
-        if(item.name == "MysteriousHerb") {
-            inventory.AddMysteriousHerb();
+        if(item.name.Contains("MysteriousHerb")) {
+            InventoryManager.inventoryInstance.AddMysteriousHerb();
         }
     }
     void Start()
@@ -65,7 +66,7 @@ public class HerbController : Minigame
                     Debug.Log("Correct!");
                     timer += 3f;
                     timerText.text = (string) ((int)timer).ToString();
-                    inventory.Add(itemLastClicked.item);
+                    AddItem(itemLastClicked);
                     NewRound();
                 }
                 else {
