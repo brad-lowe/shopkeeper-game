@@ -26,9 +26,6 @@ MonoBehaviour:
     m_IsDefault: 1
     m_Capabilities: 7
     m_ConfigSource: 0
-<<<<<<< HEAD
-  m_UserSelectedRegistryName: 
-=======
   - m_Id: scoped:project:OpenUPM
     m_Name: OpenUPM
     m_Url: https://package.openupm.com
@@ -38,7 +35,6 @@ MonoBehaviour:
     m_Capabilities: 0
     m_ConfigSource: 4
   m_UserSelectedRegistryName: OpenUPM
->>>>>>> main
   m_UserAddingNewScopedRegistry: 0
   m_RegistryInfoDraft:
     m_Modified: 0
