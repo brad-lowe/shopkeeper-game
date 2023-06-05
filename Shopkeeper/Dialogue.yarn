@@ -1,0 +1,584 @@
+title: Introduction(Narration)
+
+NARRATOR : The Kingdom of Westlewood is a thriving nation. Serving as the world’s center for trade and commerce, it is a hub where all races and cultures can be found. But, ever since the Scourge appeared, the kingdom has been plagued by deadly monsters. The people’s hope rests in a savior courageous enough to take on the Scourge, driven enough to see it through, and adventurous enough to overshadow any and all doubts that may fall in their path.
+
+And you... Are not that savior.
+
+Though it seems that you’ve found yourself in a bit of a tough position—Not necessarily grappling with having a kingdom’s wellbeing rest upon you and likely the fate of the whole world, but we all have our challenges I suppose. Let’s see... you’ve recently found yourself in crippling debt huh?
+
+MC (Neutral Sprite w/o Mask) : ... 
+
+NARRATOR : No need to be embarrassed child, tough times are upon us all.
+
+Well now young traveler, tell me, how did you end up in this situation?
+
+NARRATOR: No need to be embarrassed, child. Tough times are upon us all.
+
+Well now, young traveler, tell me, how did you end up in this situation?
+
+
+[[1. I was a noble before my house suddenly fell to poverty and disgrace.]]
+[[2. I was a scholar whose ambitions’ costs outweighed my coin pockets.]]
+[[3. I was a criminal with expensive vices and a penchant for making promises I couldn’t keep.]]
+[[4. I was a shopkeep’s apprentice, though small business failures cost money.]]
+
+== 1 ==
+<<set backstory = "Noble">>
+<<set boost = "Shopping Discounts">>
+<<goto continue_dialogue>>
+
+== 2 ==
+<<set backstory = "Scholar">>
+<<set boost = "Haggling Boost">>
+<<goto continue_dialogue>>
+
+== 3 ==
+<<set backstory = "Criminal">>
+<<set boost = "Minigame Luck">>
+<<goto continue_dialogue>>
+
+== 4 ==
+<<set backstory = "Apprentice">>
+<<set boost = "General Small Boost">>
+<<goto continue_dialogue>>
+
+
+== continue_dialogue ==
+NARRATOR: Pity. Your story is quite intriguing. Let's continue our conversation.
+
+// The dialogue continues here based on the chosen backstory and boost.
+
+
+    -> I was a noble before my house suddenly fell to poverty and disgrace. (Set Backstory: Noble; Boost: Shopping Discounts)
+
+        My family was of high and respectable stock. The cream of the crop some might even say. Serving closely under the king, we knew anyone that was worth knowing, and they knew us. Business was easy and money flowed freely... Too freely.
+        Soon it was found out that for as much money as we brought to the royal table, we were embezzling twice the amount, all unbeknownst to me of course! Unfortunately, the only mercy spared to me was not having my head sliced off in the capital square. Those who I believed to be my allies turned their backs at my pleas, and I watched helplessly as my family’s blood seeped down the gutters, along with my life as I knew it. Though my family was lost, our debts weren’t, and now this mercy is starting to look a lot less gracious than it did when I had a sword to my neck.
+        All I have now is a traveling pack, a list of names I can drop so long as the bearers don’t find out, and a hollowed coin purse.
+
+
+-> 2. I was a scholar whose ambitions’ costs outweighed my coin pockets. (Set Backstory : Scholar ; Boost : Haggling Boost)
+    I was always a kid whose sights were set on the stars above my small, impoverished town. Growing up, I was the prodigy child of my community, the one who was going to rise up out of that manure dump and make something of {herself/himself/themself}. And I guess I did… at least for a little while.
+	It all began when I was accepted into the Kingdom’s top academy on a full ride scholarship. Despite my lack of connections and paper thin living funds, I was an exceptional pupil, and I made good use of my stay. For the first time in my life I felt as though I could truly become someone. Who was to say I couldn’t possibly even earn a spot on the royal council? That was until I found out that while I studied blissfully unaware, my scholarships were being tampered with by greedy officials. By the end of the term, the closest I was to being under the King was the possibility of occupying his dungeons for my unpaid student loans.
+	All I have now is a traveling pack, a set of flimsy old scrolls to testify to my costly wits, and a hollowed coin purse.
+
+-> 3. I was a criminal with expensive vices and a penchant for making promises I couldn’t keep. (Set Backstory : Criminal ; Boost : Minigame Luck)
+
+    I’d like to think of myself as an aspiring promise-keeper. Emphasis on “aspiring.” Turns out good will in thy neighbor only lasts as long as the liquor is running before you’ve got people demanding for their money back. You see, I’ve a bit of a gambling problem...
+
+	Now I may have my flaws but for the most part all was going well and good. I had some hard-earned money, the guy in the seat next to mine had a freshly sliced purse, I bet all of our assets away on the wrong horse—the usual. That was until I realized that that “guy” was one of the King’s most trusted back-alley consultants and I had just bet away royal funds. Needless to say I quickly found myself on my knees spouting all sorts of promises we both knew I sure as hell couldn’t keep. I guess I got lucky because he let me out with all my fingers still attached, so long as I got him his money back—with interest that is.All I have now is a traveling pack, a luck that’s kept me from being acquainted with the guillotine, and a hollowed coin purse.
+
+
+-> 4. I was a shopkeep’s apprentice, though small business failures cost money. (Set Backstory : Apprentice ; Boost : General Small Boost)
+
+    There’s not really much more to my story. My folks were always awfully stubborn, enough to ignore whatever anyone had to say about the market so long as they had enough to keep the door open and the sign turned. Not the best business plan, but hey it worked!
+	I grew up in a little shop under our house, stocking shelves and pestering passersby with jingles for discounts I made up myself. I practically breathed dusty ledger pagers and counting coins ran through my blood. But in this world, passion simply just isn’t enough, not when you live in a kingdom with such a self-cannibalizing economy. My parents were good, honest folk who believed that their hard work and passion would pay off in the end. But alas, it never did. Soon enough the only assets my parents had left for me were negative bank statements and loan shark debts.
+	All I have now is a traveling pack, a modest set of skills cultivated from my childhood, and a hollowed coin purse.
+
+NARRATOR : Pity.
+
+MC (Sad Sprite w/o Mask) : ... 
+
+NARRATOR : Well, regardless of that, what matters is the bounty on your head if you don’t make true on your word. Lest you forget that the king has been collecting the parts of those who don’t pay up on their dues in a timely manner, something about it being a lucrative new business venture and all that.
+
+[[1. Yes]]
+[[2. Not really-]]
+
+You do wish to keep your insides and outsides unharvested, yes?
+-> 1. Yes…
+== 1 ==
+NARRATOR: Excellent, just what I was hoping to hear.
+-> 2. Not really-
+NARRATOR: Rhetorical question, you miscreant. Gods above, the youth these days…
+
+NARRATOR : Let me find my page... Ah, here we go: In order to avoid certain death via a foot infection from missing toes or other such grotesque fates, you’ve decided to set up shop in a region farther away from the long-bursted bubble economy of the capital. At least, for now. Yes, the best place to start is where the monsters are meek and young heroes are desperate for any boost they can get their sticky little fingers on.
+
+However, all businesses require a face, and yours simply won’t cut it.
+
+MC : ???
+
+NARRATOR : It’s just too distinguishable... Too openly expressive... Too haunted by the failures of your past, and weakness doesn’t turn coin. So call this a rebrand if you will. Any merchant worth their salt has an air of mystery to them—keeps the customers coming back.
+
+Besides, as you are now, I believe you have a few watchful eyes following you. Eyes you’d be better off evading for now.
+
+MC (Nervous Sprite w/o Mask) : …
+
+NARRATOR : Tch, that face right there is absolutely massacring any impulse in me to buy something. No window shopping appeal at all. But! That’s what we’re here to fix. Now take this—it’s no Excalibur, but think of it as armor made to fit your specific circumstances.
+
+[MASK OBTAINED]
+
+MC (Neutral) : ...
+
+NARRATOR : See? Much better. And take these too, you’re going to need to look the part to act it.
+
+[ROBES AND TRAVELING PACK OBTAINED]
+
+NARRATOR : The first step in a journey is to make yourself known... Now tell us intrepid traveler, who are you?
+
+[[PLAYER_CUSTOMIZATION]]
+[PLAYER ENTERS CHARACTER CUSTOMIZATION FOR NAME AND OUTFIT]
+
+
+
+
+Introduction (Prologue)
+===  SCENE 1: The Attack ===
+Summary: After having traveled for weeks on end, you’ve almost reached your final destination, a small village a ways away from the economic ruin the rest of the kingdom is facing. However, a slime catches you unawares. It seems like your journey is about to come to an early end... Luckily, a mysterious figure intervenes, and offers to help you get acquainted with the community. You’re not inclined to reject a man who carries explosives on him. We open on the MC’s walking sprite.
+
+NARRATOR: After having traveled for weeks on end, you’ve almost reached your final destination, a small village a ways away from the economic ruin the rest of the kingdom faces. As you round the mountain, the path breaks into a clearing, and you finally get a first glimpse at the place in which your story will begin anew: {playerName}'s
+
+[MC pauses]
+
+MC (Amazed) : Just one more day left, and then I’ll be there.
+
+…
+
+MC (Nervous) : The worst part is always the final stretch…
+
+[MC resumes walking]
+
+[After a few beats, a SLIME appears, shocking MC]
+
+MC (Surprised) : A slime??? I thought they didn’t like going out during the daytime.
+
+NARRATOR: The slime blocks your path.
+
+<<set $slimeDefeated = false >> // variable to track if slime was defeated 
+
+[[Backing away into the brush, you try to sneak around it]]
+-> sneak_away
+
+[[Sifting through your bag, you attempt to bribe it]]
+-> bribe_slime
+
+[[Without thinking, you go in for an attack and lunge at it]]
+-> attack_slime
+
+== sneak_away ==
+     MC (Neutral) : Nice and quiet now…
+
+     NARRATOR : Ever so slowly, you put one foot behind the other, creeping away from the slime. It makes no move, perhaps not yet yet noticing you.
+
+     MC (Scared) : …
+     NARRATOR : You dare not breathe, seeing how close you are to safety…
+     MC : …
+     NARRATOR: Slowly, the slime disappears from view, its form falling back in with the trees ahead. It appears that you have successfully evaded an encounter you would have been woefully unprepared for.
+    MC (Happy) : I…I did it!?
+    NARRATOR: You turn around to continue along another, hopefully less dangerous, trail.
+    Slime: …
+    MC (Neutral) : …
+    MC (Scared) : Oh Gods above.
+    NARRATOR: You scream as the slime you believed that you had escaped lunges at you, enveloping your arms in its goo.
+
+->continue_story
+
+== bribe_slime == 
+
+    MC (Neutral) : Now what could lure a slime away…
+    NARRATOR : You rummage through your backpack, tossing aside the copious amounts of papers and rocks you picked up along the journey. Finally, you procure a small apple, obtained when it fell upon your head a few hours ago. Talk about lucky.
+    MC (Happy) : Aha!
+    NARRATOR : Tentatively, you hold out the apple to the slime, slowly waving it back and forth to jog its interest.
+    SLIME : …?
+    MC : C’mon, be a good slime and take the apple… No need to fight.
+    SLIME : …
+    NARRATOR : The slime envelops the apple–
+    MC : Yes!
+    NARRATOR : …And your hand.
+    MC (Scared) : No!
+
+->continue_story 
+
+== attack_slime == 
+
+    MC (Angry) : DIE!!!
+    NARRATOR : In possibly one of the worst moves you’ve made in your life, you spring forward, bare hands ready to tear the blob apart. It doesn’t work of course, anyone could’ve seen that coming. Except for you apparently.
+    MC (Scared) : …Crap.
+    NARRATOR : Rather than destroying the slime, you find yourself attached to it, hands covered in its blue ooze. The slime stares up at you in silence.
+    SLIME : …
+    MC (Scared) : …
+    SLIME : …
+    MC (Neutral) : …
+    MC (Happy) : … :)?
+    SLIME : >:/
+    NARRATOR : The slime proceeds to move further up your arms, its sticky goo keeping it firmly stuck on no matter how much you try to struggle free. At this rate, it’ll only be a matter of seconds until you’re completely engulfed.
+
+== continue_story == 
+
+MC (Scared) : I’m going to die, aren’t I?
+
+NARRATOR : Yes. Yes you are. As you brace yourself to experience one of arguably the most embarrassing ways to die, you think back on your life–small, insignificant, unremarkable. And just when you were about to turn it all around, to carve out a place for yourself in this economic nightmare of a kingdom, you lost it all again.
+
+MC (Sad) : …
+
+NARRATOR: You squeeze your eyes shut, feel the cold slime climb over you and-
+
+??? (No sprite appears yet) : *FWING*
+
+Slime : !!!
+
+NARRATOR : Something whizzes past you, narrowly missing your head. Albeit still coated in slime, your body has been freed from the weight of the gelatinous creature.
+
+MC (Surprised) : W-What? I’m not dead?
+
+??? : You’ve got a pulse don’t you?
+
+[ENTER VISUAL NOVEL VIEW]
+
+NARRATOR : Out from the brush emerges a cloaked figure holding a bow. He gives you a crooked grin, nodding his head to the slime skewered to a tree by an arrow.
+
+??? (Smug) : Bullseye.
+
+Narrator: He walks over, reaching out a gloved hand to lift you to your feet.
+
+[[You saved my life!]]
+    -> saved_my_life
+
+[[...Thank you...]]
+    -> thank_you
+
+[[Who the hell are you?]]
+    -> who_are_you
+
+== saved_my_life == 
+
+    MC (Surprised) : Oh Gods, you just saved my life. Thank you…!
+    NARRATOR : He beams at you, though he seems more amused than moved by your thanks. You take his hand, and he lifts you up gingerly before giving a mock bow and looking back up with a smirk.
+    ??? (Smug) : Anything for a {damsel/dude/dear traveler} in distress.
+    MC (Happy) : Is there any chance I could get your name?
+    ??? {Entertained} : Not on your life!
+    MC (Surprised) : Oh…excuse me?
+    NARRATOR : The decidedly unnamed figure gives you a look and snorts.
+    ??? (Neutral) : Listen pal, you’re obviously new around here and if you can’t even take a slime, then I’m pretty sure you couldn’t land anything on me even if you tried. You’re more of an unprepared idiot than a threat.
+    MC (Annoyed) : Wow…thanks.
+    ??? : I’m right–Now listen… There’s a lot of fae and other tricky creatures around here, mostly harmless, sometimes not. But if they ever ask for your name, you don’t give it to them. Got it?
+    MC (Nervous) : Oh.
+    MC (Neutral) : …
+    MC (Surprised) : OH.
+    ??? (Smug) : There ya go.
+
+-> continue_story
+
+== thank_you == 
+
+    MC (Nervous) : …Thanks… I guess…?
+    ??? (Annoyed) : You GUESS? Did you WANT to die to a glorified booger?
+    MC : No, not really.
+    ??? : Then I GUESS you should try to act a little more grateful to the guy that just rescued you.
+    MC : But-
+    NARRATOR: He lets go of your hand, letting you fall back on your butt with a painful thud.
+    ??? (Petty) : Get up yourself.
+    NARRATOR : He sticks out his tongue at you and crosses his arms.
+    ??? : Blegh!
+    NARRATOR : You shakily start to get up, though the slime makes you slip around. All the while the stranger laughs at your struggle, pointing and cackling every time you fall back down.
+    MC (Annoyed) : …Thanks for the help.
+    ??? (Smug) : My pleasure… I guess.
+
+    -> continue_story 
+
+== who_are_you == 
+
+    NARRATOR : You attempt to slap his hand away, but he withdraws before you can make contact. Instead, he places his hand on your head and gives you a hard noogie.
+    MC (Angry) : Get off of me, who the hell do you think you are???
+    ??? (Smug) : I think the words you’re looking for are “Thank you so much I owe you my life!”
+    NARRATOR : He continues to noogie you, now shaking your head around as the rubbing grows more vigorous.
+    ??? : Weak. Losers. Who. Yell. At. Friendly. Hunters. Get. Punished.
+    MC : Just mind your business and leave me alone!
+    ??? (Bored) : Don’t feel like it.
+    MC : Gods, do you get off to running around like a freak and harassing people?
+    NARRATOR : As the words leave your mouth, a cold point presses at your neck. You look down, taking a moment to register the arrow held to your throat.
+    ??? : Watch your ego, pal.
+    NARRATOR : He grins again, though his mask obscures his full expression.
+    ??? (Smug) : And the answer is yes. Yes I do.
+
+    -> continue_story
+
+ == continue_story == 
+
+NARRATOR : A few moments pass as the two of you size each other up. As you get a better look at him, you notice all of the feathers sticking up from his outfit, as well as the bird design of his mask.
+
+MC (Neutral) : So stranger… I guess this is it then? Sorry but if you want money I don’t have much to spare.
+
+??? (Smug) : Oh no I’m fine with taking an IOU.
+
+NARRATOR : He leans in, bow still held in his hands, the next arrow ready to be nocked.
+
+??? (Neutral) : But I take interest too.
+
+MC (Nervous) : …
+
+??? (Entertained) : ANYWAYS–What brings a squishy newbie like you into these forests? Usually when people move around here, they’re equipped to handle basic obstacles.
+
+[[I’m traveling to the town near here.]]
+    -> town_travel 
+
+[[None of your business.]]
+    -> none_of_your_business
+
+   == town_travel == 
+    MC (Neutral) : I was heading to the nearby town and I didn’t really have a chance to get anything to deal with this… sort of situation.
+
+    ??? (Entertained) : How funny! Could it be that…
+    ??? (Neutral) : You’re running from something?
+    MC (Nervous) : I’d rather not say…
+
+-> continue_story 
+
+== none_of_your_business == 
+
+    MC (Angry) : Piss off and mind your own business.
+    ??? (Entertained) : Touchy touchy I see. Could it be that…
+    ??? (Neutral) : You’re running from something?
+    MC (Nervous) : …
+
+-> continue_story
+
+== continue_story == 
+
+??? (Smug) : Ooh~ mysterious past? You’re gonna be a fun one.
+
+MC (Nervous) : …
+
+??? (Neutral) : Well, town is close but it’s still a ways away. If you couldn’t even take that thing–
+
+NARRATOR : He nods his head to the green-stained bark.
+
+??? : Then you’ll be dead for real in 15 minutes when you get to squirrel territory.
+
+MC (Neutral) : Great. Awesome.
+
+??? (Entertained) : BUT! I could help with that.
+
+MC : And how would you help exactly?
+
+NARRATOR : Again he nods to the stained tree.
+
+MC (Suspicious) : Point taken.
+
+??? : So what do you say? I escort you the rest of the way and you don’t die!
+
+MC : …On what conditions?
+
+??? (Smug) : Heh. Got me.
+
+MC : Nothing’s ever free here. Of course you’d want something. Well, you already know that I can’t pay you anything.
+
+??? : Well… I’m feeling a little generous, so I’ll be your escort on 3 money free conditions.
+
+??? (Neutral) : One. You get me some herbs and I’ll make a poultice for your slime rash. It’ll be a pain to drag around even more dead weight if you’re stuck limping. around
+
+NARRATOR : You look down at his comment, now noticing that the itchy soreness you were feeling creep up on you was in fact due to the reddened blisters from where the slime soaked into your clothes. AKA all over almost all of your body.
+
+MC (Neutral) : Reasonable enough.
+
+??? : Two. You get me a snack, I’m feeling like apples today. You can get some from the nearby trees while we walk.
+
+MC : That shouldn’t be too hard I guess…?
+
+??? (Entertained) : And three. I want a sword. Swords are cool.
+
+MC (Suspicious) : Okay you lost me.
+
+??? (Petty) : I want a sword and swords are cool! You wanna die or not?
+
+MC : Not particularly but how am I going to get a sword?
+
+??? : Make one! All the materials you’ll need are on the way, as long as you get it done before we reach town I’ll let it slide. I’ll even pay you!
+
+MC : And if we get to town and I don’t make it for you? What are you going to do then?
+
+??? (Neutral) : I’ll drag your sorry ass back to the middle of the forest and leave you there. Got it?
+
+MC (Nervous) : Got it.
+
+??? (Entertained) : Alrighty! Then do we have ourselves a deal?
+
+[[We do.]]
+    -> we_do
+    
+
+[[We dont.]]
+    -> we_dont
+
+== we_do
+    MC (Neutral) : It’s a deal.
+    ??? : Excellent.
+
+    -> continue_story 
+
+== we_dont == 
+
+    MC (Angry) : I think I’ll take my chances.
+    ??? (Bored) : It’s your funeral.
+    NARRATOR : And it in fact was your funeral. After 15 minutes, just as predicted, you ran into a pack of fuzzy woodland creatures. You did not survive your injuries.
+    [GAME OVER]
+
+    -> continue_story 
+
+== continue_story == 
+
+NARRATOR : Spitting into his palm, he clasps your hands in a handshake before you can pull away.
+
+MC (Nervous) : Now… Can I at least call you something other than “Stranger”?
+
+??? (Entertained) : Hm, I don’t know. “Stranger” has a pretty good ring to it.
+
+MC (Annoyed) : …
+
+LEON (Annoyed) : Ugh, fine. It’s Leon.
+
+MC (Suspicious) : And last name?
+
+LEON : I don’t do last names.
+
+MC : Wow how cool…
+
+NARRATOR : Before you can finish your sentence, you feel an itchy, aching jolt of pain run through your body. You’re exhausted, more than usual.
+
+MC (Nervous) : Ouch.
+
+LEON (Petty) : Serves you right.
+
+MC : Okay okay I’m sorry. Now what am I supposed to get to deal with this?
+
+LEON (Bored) : Cilantro, obviously. The universal healing herb. Go over into that little patch and you should find plenty of it. I’ll take it from there and make something to put on your blisters. Just… don’t get the wrong thing, you don’t want to accidentally rub a nerve agent into your wounds and die.
+
+MC : Won’t you tell me if I accidentally get a lethal nerve agent though?
+
+LEON (Smug) : Nope.
+
+MC (Suspicious) : Awesome…
+
+NARRATOR : And with that you set off, or rather, limp off to get the cilantro to cure your wounds.
+
+[GO INTO MAP FOR HERB PICKING MINIGAME] 
+
+MC (Neutral) : Cilantro acquired.
+
+LEON (Neutral) : Excellent. Now give me a sec–
+
+NARRATOR : He turns away from you, and after a few minutes, turns back around with a leaf smattered with green paste.
+
+LEON : Rub this everywhere the slime touched and you should feel better after a couple of minutes.
+
+MC (Amazed) : Thanks.
+
+NARRATOR : Following Leon’s instructions, you walk over to some nearby bushes, rubbing down all of the affected areas. The paste seemingly melts into your skin, washing away the redness and blisters. As the minutes pass, the aching ebbs away until you feel as though the whole ordeal had never happened.
+
+	
+<<if $backstory == "Noble">>
+    MC (Surprised): Why did my family ever bother with those expensive creams?
+<<elseif $backstory == "Scholar">>
+    MC (Surprised): I’ve never read about this in botany class…
+<<elseif $backstory == "Criminal">>
+    MC (Surprised): I could have used this in my last fight…
+<<elseif $backstory == "Apprentice">>
+    MC (Surprised): We should have been selling this at the store!
+<</if>>
+
+-> continue_story
+
+
+== continue_story == 
+
+NARRATOR : After you redress, you walk back out onto the path, spotting Leon who hangs upside down on a nearby tree.
+
+LEON (X-axis flip) (Bored) : Done?
+
+MC (Neutral) : Done.
+
+NARRATOR : Jumping down from the tree, Leon continues down the path, not bothering to check whether or not you’re keeping up with his pace. Fruit trees begin springing into view as the two of you make your way through the forest.
+
+LEON (Not flipped) (Smug) : Great, I worked up an appetite waiting for you. Make sure you pick some extra juicy apples for me.
+
+MC (Suspicious) : Can’t you just pick your own apples on the way? I bet you could actually reach them instead of me.
+
+LEON (Bored) : Tsk tsk tsk. Trying to weasel yourself out of the deal already? Besides, don’t you know? Apples taste wayyyyy better when someone else has to struggle to pick them while you get to watch.
+
+MC (Annoyed) : Oh so you’re just a sadist.
+
+LEON (Entertained) : I can’t hear you over my stomach growling~
+
+MC : Ugh.
+
+[GO INTO MAP FOR APPLE PICKING MINIGAME PHASE 1]
+
+NARRATOR : Sliding down from the tree, you wobble over to Leon, arms loaded with apples gathered through your blood, sweat, and tears.
+
+LEON (Neutral) : Wow… that was…
+
+Really pathetic.
+
+LEON (Smug) : I loved it.
+
+MC (Annoyed) : Sadist.
+
+NARRATOR : Seemingly from out of nowhere, he throws you an old axe, which, thank the Gods above, you manage to catch.
+
+LEON : As much as I’d love to watch you try and shake a tree out of the ground, night is coming soon. So get to chopping for that sword!
+
+MC : If the monsters don’t kill me, this guy will…
+
+[GO INTO MAP FOR APPLE PICKING MINIGAME PHASE 3] -
+
+MC (Neutral) : Here, your sword.
+
+[Item displayed : Wooden sword (aka just a stick)] -- display item 
+
+LEON (Annoyed) : You seem really committed to dying, you know that?
+
+MC : You can stab things with it, can’t you?
+
+LEON : I don’t know, why don’t we test it out then?
+
+NARRATOR : Leon jabs at you with the pointed stick, irritating your previously healed wounds. It seems as though those spots are still sore. He gives you another pointed jab, tearing through your robe.
+
+MC (Angry) : Hey! Ow! STOP IT!
+
+NARRATOR : He lowers the stick and gives you a pointed look.
+
+LEON (Bored) : We’re going to pass by some caves in a little, I’m sure you can find some stone to make a real sword when we get there.
+
+MC (Annoyed) : Do I look like a blacksmith to you?
+
+LEON : You want to be a shopkeeper right? I saw your pack. If you think you’re going to make it out here with no materials, money, or skills, then I can just drop you off at the nearest dungeon–it’d be a much more merciful death than what you have planned for yourself.
+
+MC : One sword coming up…
+
+[GO INTO MAP FOR MINING MINIGAME] 
+
+MC (Neutral) : I guess I put this here and this there… and maybe this over here?
+
+[GO INTO CRAFTING MENU AND MAKE SWORD] 
+
+LEON (Entertained) : Look at that shine… You really outdid yourself.
+
+MC (Tired) : I want to die.
+
+	LEON : Now, now. There’s only one thing left to do!
+
+    
+// Define a new node for selling the sword
+=== SellSword ===
+<<display ["Wooden Sword"]>>  // Display the item, assuming "Wooden Sword" is the name of the item
+
+LEON (Smug): Pleasure doing business with you...
+
+MC (Neutral): {NAME}. My name is {NAME}.
+
+LEON: Well then, pleasure doing business with you, {NAME}. Just don't forget about me when you start running the town. I could do with a generous friend discount at your shop.
+
+MC (Neutral): I'll think about it.
+
+NARRATOR : And with that, Leon gives you a strong pat on the back, turning you around to face the horizon. That’s when you spot it, the town that you’ve planned to set your roots in.
+
+[TOWN SHOT] 
+
+NARRATOR : This is it. This is where it’ll all begin. All you needed to do now was…
+
+>If Backstory = Noble
+		Restore your house’s name.
+	>If Backstory = Scholar
+		Pay your student loans.
+	>If Backstory = Criminal
+		Make true on your promises.
+	>If Backstory = Apprentice
+		Pay your family’s debts.

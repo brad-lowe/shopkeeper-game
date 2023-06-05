@@ -1,0 +1,48 @@
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using Yarn;
+using Yarn.Unity;
+
+public class DialogueManager : MonoBehaviour
+{
+    [SerializeField] private TextAsset yarnFile;
+    private DialogueRunner dialogueRunner;
+
+    private void Awake()
+    {
+        // Create a new dialogue runner
+        dialogueRunner = new DialogueRunner();
+
+        // Load the Yarn file into the dialogue runner
+        dialogueRunner.AddScript(Dialogue.yarn);
+
+        // Start the dialogue
+        dialogueRunner.StartDialogue();
+
+        // Register a function that will be called when a command is encountered in the Yarn script
+        dialogueRunner.AddCommandHandler("customCommand", CustomCommandHandler);
+    }
+
+    private void Update()
+    {
+        // Process any queued commands in the dialogue runner
+        while (dialogueRunner.IsDialogueRunning)
+        {
+            dialogueRunner.RunNext();
+        }
+
+        // Check if the dialogue has finished
+        if (!dialogueRunner.IsDialogueRunning)
+        {
+            Debug.Log("Dialogue ended.");
+            // Perform any necessary actions when the dialogue ends
+        }
+    }
+
+    // Custom command handler
+    private void CustomCommandHandler(string[] parameters)
+    {
+        // Handle the custom command here
+    }
+}
