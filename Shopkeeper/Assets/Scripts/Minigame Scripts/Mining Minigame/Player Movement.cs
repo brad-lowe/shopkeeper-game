@@ -16,7 +16,7 @@ public class PlayerMovement : Minigame
 
     public Rigidbody2D rb;
 
-    float timerTillDestruction = 2.0f;
+    public float timerTillDestruction = 1f;
 
     bool inAJump = false;
     bool horizontalMovement = false;
@@ -40,7 +40,7 @@ public class PlayerMovement : Minigame
             if (timerTillDestruction <= 0.0f)
             {
                 Destroy(collider.gameObject);
-                timerTillDestruction = 2.0f;
+                timerTillDestruction = 1f;
             }
         }
     }
