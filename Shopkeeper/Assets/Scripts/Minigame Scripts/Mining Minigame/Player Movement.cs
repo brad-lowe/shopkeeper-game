@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : Minigame
 {
 
-    public float speed = 10.0f;
+    public float speed = 5.0f;
     public float jumpGravityScale = 1f;
     public float fallGravityScale = 4;
     float allocatedButtonTime = 0.3f;
