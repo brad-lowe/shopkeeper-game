@@ -13,13 +13,33 @@ public class HerbController : Minigame
     private InteractableHerb itemLastClicked;
     private InteractableHerb itemToClick;
     private string nameToClick;
-    private float timer = 3f;
+    private float timer = 6f;
     public Text timerText;
 
+    public InventoryManager inventory;
+
     // Start is called before the first frame update
+    void AddItem(InteractableHerb item) {
+        if(item.name == "Cilantro") {
+            InventoryManager.inventoryInstance.AddCilantro();
+        } 
+        if(item.name == "Beatroot") {
+            inventory.AddBeatroot();
+        }
+        if(item.name == "Zingseng") {
+            inventory.AddZingseng();
+        }
+        if(item.name == "Mushgloom") {
+            inventory.AddMushgloom();
+        }
+        if(item.name == "MysteriousHerb") {
+            inventory.AddMysteriousHerb();
+        }
+    }
     void Start()
     {
         //Debug.Log(timerText.gameObject.name);
+        inventory = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
         items = new List<InteractableHerb>();
         itemCopies = new List<InteractableHerb>();
         GameObject[] itemObjects = GameObject.FindGameObjectsWithTag("Herb");
@@ -43,8 +63,9 @@ public class HerbController : Minigame
                 itemLastClicked = hit.collider.gameObject.GetComponent<InteractableHerb>();
                 if(itemLastClicked.name.Contains(nameToClick)) {
                     Debug.Log("Correct!");
-                    timer += 1f;
+                    timer += 3f;
                     timerText.text = (string) ((int)timer).ToString();
+                    inventory.Add(itemLastClicked.item);
                     NewRound();
                 }
                 else {
@@ -61,7 +82,7 @@ public class HerbController : Minigame
 
     void BeginRound()
     {
-        int numHerbs = round*15 + 5;
+        int numHerbs = round*10 + 5;
 
         itemLastClicked = null;
         Random rand = new Random();
