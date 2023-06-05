@@ -11,6 +11,7 @@ public class PlayerMovement : Minigame
     public float fallGravityScale = 4;
     float allocatedButtonTime = 0.3f;
     float timeJumped = 0f;
+    float timeRemaining = 30f;
 
     //bool canBeDestroyed = false;
 
@@ -48,6 +49,10 @@ public class PlayerMovement : Minigame
     // Update is called once per frame
     void Update()
     {
+        timeRemaining -= Time.deltaTime;
+        if (timeRemaining <= 0) {
+            isGameFinished = true;
+        }
         if (isGameFinished)
         {
             EndMinigame();
