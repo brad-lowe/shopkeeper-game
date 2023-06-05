@@ -16,9 +16,14 @@ public class PlayerMovement : Minigame
 
     public Rigidbody2D rb;
 
+    float timerTillDestruction = 2.0f;
+
     bool inAJump = false;
     bool horizontalMovement = false;
     bool facingRight = true;
+
+
+    bool isGameFinished = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,14 +36,22 @@ public class PlayerMovement : Minigame
         //inAJump = false;0
         if(collider.gameObject.tag == "Block" && Input.GetKey(KeyCode.M))
         {
-            //canBeDestroyed = true;
-            Destroy(collider.gameObject, 2);
+            timerTillDestruction -= Time.deltaTime;
+            if (timerTillDestruction <= 0.0f)
+            {
+                Destroy(collider.gameObject);
+                timerTillDestruction = 2.0f;
+            }
         }
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+        if (isGameFinished)
+        {
+            EndMinigame();
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             inAJump = true;
