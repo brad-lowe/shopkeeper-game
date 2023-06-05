@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &140337485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &224441423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,58 +438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1279738039}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &540927185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 540927187}
-  - component: {fileID: 540927186}
-  m_Layer: 0
-  m_Name: InventoryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &540927186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540927185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e551d57d47c6f42469d7dae54ad2b9b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
-  apples: []
-  wood: []
-  steel: []
-  cilantro: []
-  weapons: []
-  itemContent: {fileID: 0}
-  inventoryItem: {fileID: 0}
---- !u!4 &540927187
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540927185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.131415, y: 3.6492171, z: -0.0033822842}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681995746
 GameObject:
@@ -571,7 +521,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023555503
 GameObject:
@@ -807,6 +757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1154293108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,6 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1213667575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,6 +1073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1228474011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,7 +1193,7 @@ Transform:
   - {fileID: 140337487}
   - {fileID: 1697884639}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1352840884
 GameObject:
@@ -1411,6 +1364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1441174537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1568,6 +1522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1563199525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1769,6 +1724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1697884637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1931,7 +1887,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1856648729
 GameObject:
@@ -2010,6 +1966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1856648732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2167,6 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b74a618ec0349eca8758a1fe220507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &1891235483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2313,5 +2271,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

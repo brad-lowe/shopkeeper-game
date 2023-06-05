@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseShake : MonoBehaviour
+public class MouseShake : Minigame
 {
     // Start is called before the first frame update
     Vector3 lastmouseposition;
     int score = 0;
     int numApples = 0;
+    float timer = 5f;
     void Start()
     {
         lastmouseposition = Input.mousePosition;
@@ -23,6 +24,7 @@ public class MouseShake : MonoBehaviour
      */
     void FixedUpdate()
     {
+        timer -= Time.deltaTime;
         if (score < 100)
         {
             if ((Input.mousePosition-lastmouseposition).magnitude >30)
@@ -49,6 +51,9 @@ public class MouseShake : MonoBehaviour
             InventoryManager.inventoryInstance.AddApple();
             Debug.Log($"You got an apple! Total apples: {InventoryManager.inventoryInstance.apples.Count}");
             score = 0;
+        }
+        if(timer <= 0f) {
+            EndMinigame();
         }
     }
 
